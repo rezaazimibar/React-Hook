@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import UseRealExample from "./hooks/UseRealExample";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header className=" text-center py-5 mx-48 border-b-2">
+        <h1>بارگیری و استفاده از هوک های ریکت</h1>
       </header>
-    </div>
+      <main className="text-center my-10">
+
+        <UseRealExample />
+      </main>
+    </>
   );
-}
+};
 
 export default App;
