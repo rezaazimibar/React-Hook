@@ -35,14 +35,12 @@ const UseRealExample = () => {
     <>
       <main>
         <div
-          className="bg-teal-100 border-t-4 w-1/3 m-auto border-teal-500 transition rounded-b text-teal-900 hover:shadow-none hover:translate-y-2 px-4 py-3 shadow-md"
+          className="input"
           role="alert"
         >
-          <div className="flex justify-center w">
-            <div>
-              <p className="font-bold">useRef آشنایی با هوک</p>
-            </div>
-          </div>
+     <div class="alert alert-danger" role="alert">
+آشنایی با هوک useRef
+</div>
         </div>
         <p dir="rtl">{`میزان رندر های انجام شده:${renderCount.current}`}</p>
         <p dir="rtl">{`نام شما برابر است با :${name}`}</p>
@@ -53,14 +51,14 @@ const UseRealExample = () => {
           ref={inputRef}
           type="text"
           dir="rtl"
-          className="input m-auto my-5 "
+          className="form-control m-auto my-2 "
           placeholder="اسم وارد کیند"
         />
         <button
           onClick={focusInput}
-          className="btn w-1/3 m-auto flex justify-center"
+          className="btn btn-primary"
         >
-          <FaEye />
+          <FaEye />{" "}
           تمرکز کن
         </button>
       </main>
