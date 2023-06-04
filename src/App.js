@@ -6,6 +6,7 @@ import {
   UseCallbackExample,
   UseMemoExample,
   UseRealExample,
+  UseReducerExample,
 } from "./hooks/index.js";
 
 import { FaRocket } from "react-icons/fa";
@@ -29,8 +30,12 @@ const App = () => {
           <UseMemoExample />
         </Accordion>
         <hr className="text-success" />
-        <Accordion title="مثال هوک useMemo" heading="headingThree">
-       <UseCallbackExample/>
+        <Accordion title="مثال هوک useCallback" heading="headingThree">
+          <UseCallbackExample />
+        </Accordion>
+        <hr className="text-success" />
+        <Accordion title="مثال هوک useReducer" heading="headingFourth">
+          <UseReducerExample />
         </Accordion>
         <hr className="text-success" />
       </main>
