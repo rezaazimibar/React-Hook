@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback,  } from "react";
 const List = ({ getItems }) => {
   const [items, setItems] = useState([]);
   useEffect(() => {
@@ -11,7 +11,7 @@ const List = ({ getItems }) => {
 const UseCallbackExample = () => {
   const [number, setNumber] = useState(1);
   const [colorChange, setColorChange] = useState(false);
-  
+
   const getItems = useCallback(() => {
     return [number, number + 1, number + 2];
   }, [number]);
