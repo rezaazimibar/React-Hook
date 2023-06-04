@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect,useCallback } from "react";
 const List = ({ getItems }) => {
   const [items, setItems] = useState([]);
   useEffect(() => {
@@ -8,35 +8,28 @@ const List = ({ getItems }) => {
   return items.map((item, index) => <div key={index}>{item}</div>);
 };
 
-const superSlowFunction = (num) => {
-  console.log("Super Slow Function Is Running 🦥");
-  let count = 0;
-  //NOTE Delay the return
-  while (count <= 1000000000) {
-    count++;
-  }
-  return num * 2;
-};
+
 
 const UseCallbackExample = () => {
-  const [number, setNumber] = useState(0);
+  const [number, setNumber] = useState(1);
   const [colorChange, setColorChange] = useState(false);
+  
+  const getItems=useCallback(()=>{
+    return[number,number+1,number+2]
+  }
+  ,[number])
+ 
 
-  const doubleNumber = useMemo(() => superSlowFunction(number), [number]);
-
-  //referential equality
-  const appStyle = useMemo(() => {
-    return {
+  const appStyle = {
       backgroundColor: colorChange ? "tomato" : "white",
-    };
-  }, [colorChange]);
+  };
 
   useEffect(() => {
     console.log("Background Changed 🌈");
   }, [appStyle]);
 
   return (
-    <div className="mx-auto mt-5 d-grid gap-3 w-50">
+    <div className="mx-auto mt-5 d-grid gap-3 w-50" style={appStyle}>
       <h5 className="alert alert-primary text-center">آشنایی با هوک useMemo</h5>
       <input
         type="number"
@@ -52,8 +45,8 @@ const UseCallbackExample = () => {
       >
         رنگ رو تغییر بده 🖌️
       </button>
-      <div style={appStyle} className="text-center mx-auto">
-        <p className="alert alert-warning">{`عدد دو برابر شده برابر است با : ${doubleNumber}`}</p>
+      <div style={appStyle}  className="text-center mx-auto">
+        <List getItems={getItems}/>
       </div>
     </div>
   );

@@ -30,7 +30,7 @@ const App = () => {
         </Accordion>
         <hr className="text-success" />
         <Accordion title="مثال هوک useMemo" heading="headingThree">
-          <UseCallbackExample />
+       <UseCallbackExample/>
         </Accordion>
         <hr className="text-success" />
       </main>
