@@ -8,8 +8,8 @@ import {
   UseRealExample,
   UseReducerExample,
   UseLayoutEffectExample,
-  useImperativeHandle,
-  UseImperativeHandleExample
+  UseImperativeHandleExample,
+  UseDeferredValue,
 } from "./hooks/index.js";
 
 import { FaRocket } from "react-icons/fa";
@@ -47,6 +47,10 @@ const App = () => {
         <hr className="text-success" />
         <Accordion title="مثال هوک useReducer" heading="headingSixth">
           <UseImperativeHandleExample />
+        </Accordion>
+        <hr className="text-success" />
+        <Accordion title="مثال هوک useReducer" heading="headingSeventh">
+          <UseDeferredValue />
         </Accordion>
         <hr className="text-success" />
       </main>
