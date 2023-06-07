@@ -11,6 +11,7 @@ import {
   UseImperativeHandleExample,
   UseDeferredValue,
   UseTransitionExample,
+  CustomHooks,
 } from "./hooks/index.js";
 
 import { FaRocket } from "react-icons/fa";
@@ -56,6 +57,10 @@ const App = () => {
         <hr className="text-success" />
         <Accordion title="مثال هوک useReducer" heading="headingEighth">
           <UseTransitionExample />
+        </Accordion>
+        <hr className="text-success" />
+        <Accordion title="مثال هوک useReducer" heading="headingNinth">
+          <CustomHooks />
         </Accordion>
         <hr className="text-success" />
       </main>
